@@ -1,0 +1,20 @@
+package ifDemo;
+
+public class Ifelsedemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int one=100;
+		int two=200;
+		int three=300;
+		if(one>two) 
+			if(one>three) System.out.println(one);
+			else System.out.println(three);
+			
+			
+		else 
+			if(two>three) System.out.println(two);
+			else System.out.println(three);
+			
+		}
+	}

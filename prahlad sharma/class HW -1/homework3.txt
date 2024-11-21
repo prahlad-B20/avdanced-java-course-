@@ -1,0 +1,22 @@
+package ifDemo;
+
+public class GreatestAmongThreeNumber {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int first=100;
+		int second=300;
+		int third=500;
+		int max=first;
+		if(second>max) {
+			max=second;
+		}
+		if(third>max) {
+			max=third;
+		}
+		System.out.println("max is: "+max);
+		
+
+	}
+
+}

@@ -1,0 +1,187 @@
+Q1:------>=====================================================================================================================================================<--------
+--------->=====================================================================================================================================================<--------
+//Create one superclass HillStations and three subclasses Manali, Mussoorie, Gulmarg. Subclasses extend the superclass and override its location() and famousFor() method. i.call the location() and famousFor() method by the Parent class’, i.e. Hillstations class. 
+//As it refers to the base class object and the base class method overrides the superclass method; 
+//the base class method is invoked at runtime. ii.call the location() and famousFor() method by the all subclass’,and print accordingly.
+package com.demo;
+
+//Superclass
+class HillStations {
+ public void location() {
+     System.out.println("Generic hill station location.");
+ }
+
+ public void famousFor() {
+     System.out.println("Generic hill station attraction.");
+ }
+}
+
+//Subclass: Manali
+class Manali extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Manali is located in Himachal Pradesh.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Manali is famous for its scenic beauty and adventure sports.");
+ }
+}
+
+//Subclass: Mussoorie
+class Mussoorie extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Mussoorie is located in Uttarakhand.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Mussoorie is famous for its lush greenery and colonial charm.");
+ }
+}
+
+//Subclass: Gulmarg
+class Gulmarg extends HillStations {
+ @Override
+ public void location() {
+     System.out.println("Gulmarg is located in Jammu and Kashmir.");
+ }
+
+ @Override
+ public void famousFor() {
+     System.out.println("Gulmarg is famous for its snow-clad mountains and skiing.");
+ }
+}
+
+//Main class
+public class HillStationsDemo {
+ public static void main(String[] args) {
+     // i. Using the parent class reference to invoke methods (runtime polymorphism)
+     HillStations hillStation;
+
+     // Reference to Manali
+     hillStation = new Manali();
+     hillStation.location();
+     hillStation.famousFor();
+
+     // Reference to Mussoorie
+     hillStation = new Mussoorie();
+     hillStation.location();
+     hillStation.famousFor();
+
+     // Reference to Gulmarg
+     hillStation = new Gulmarg();
+     hillStation.location();
+     hillStation.famousFor();
+
+     System.out.println("-----------------------------");
+
+     // ii. Calling methods directly through subclasses
+     Manali manali = new Manali();
+     manali.location();
+     manali.famousFor();
+
+     Mussoorie mussoorie = new Mussoorie();
+     mussoorie.location();
+     mussoorie.famousFor();
+
+     Gulmarg gulmarg = new Gulmarg();
+     gulmarg.location();
+     gulmarg.famousFor();
+ }
+}
+
+
+Output:
+
+Manali is located in Himachal Pradesh.
+Manali is famous for its scenic beauty and adventure sports.
+Mussoorie is located in Uttarakhand.
+Mussoorie is famous for its lush greenery and colonial charm.
+Gulmarg is located in Jammu and Kashmir.
+Gulmarg is famous for its snow-clad mountains and skiing.
+-----------------------------
+Manali is located in Himachal Pradesh.
+Manali is famous for its scenic beauty and adventure sports.
+Mussoorie is located in Uttarakhand.
+Mussoorie is famous for its lush greenery and colonial charm.
+Gulmarg is located in Jammu and Kashmir.
+Gulmarg is famous for its snow-clad mountains and skiing.
+
+Q2.---->=============================================================================================================================================<-----------------
+------->=============================================================================================================================================<-----------------
+
+//Write a Java program that demonstrates method overriding by creating a superclass called Animal and two subclasses called Dog and Cat. 
+//● The Animal class should have a method called makeSound(), which simply prints "The animal makes a sound." 
+//● The Dog and Cat classes should override this method to print "TheCat/The dog meows/barks" respectively. 
+//● The program should allow the user to create and display objects of each class.
+//
+//
+package com.demo;
+
+import java.util.Scanner;
+
+//Superclass
+class Animal {
+ public void makeSound() {
+     System.out.println("The animal makes a sound.");
+ }
+}
+
+//Subclass: Dog
+class Dog extends Animal {
+ @Override
+ public void makeSound() {
+     System.out.println("The dog barks.");
+ }
+}
+
+//Subclass: Cat
+class Cat extends Animal {
+ @Override
+ public void makeSound() {
+     System.out.println("The cat meows.");
+ }
+}
+
+//Main class
+public class AnimalDemo {
+ public static void main(String[] args) {
+     Scanner scanner = new Scanner(System.in);
+
+     // Display menu for user input
+     System.out.println("Choose an animal:");
+     System.out.println("1. Dog");
+     System.out.println("2. Cat");
+     System.out.print("Enter your choice: ");
+     int choice = scanner.nextInt();
+
+     // Create and display the selected animal
+     Animal animal;
+     if (choice == 1) {
+         animal = new Dog();
+     } else if (choice == 2) {
+         animal = new Cat();
+     } else {
+         System.out.println("Invalid choice. Defaulting to generic animal.");
+         animal = new Animal();
+     }
+
+     // Call the overridden method
+     animal.makeSound();
+
+     scanner.close();
+ }
+}
+
+
+Input:
+Choose an animal:
+1. Dog
+2. Cat
+Enter your choice: 1
+
+Output:
+The dog barks.

@@ -1,0 +1,72 @@
+Q1:------>=====================================================================================================================================================<--------
+--------->=====================================================================================================================================================<--------
+
+//Write a program to input two numbers and find the maximum between two numbers using the conditional/ternary operator.
+package com.demo;
+import java.util.Scanner;
+public class MaxBetweenTwoNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        // Input two numbers from the user
+        System.out.print("Enter the first number: ");
+        int num1 = scanner.nextInt();
+
+        System.out.print("Enter the second number: ");
+        int num2 = scanner.nextInt();
+
+        // Use the conditional operator to find the maximum
+        int max = (num1 > num2) ? num1 : num2;
+        // Display the result
+        System.out.println("The maximum between " + num1 + " and " + num2 + " is: " + max);
+        scanner.close();
+    }
+}
+
+Input: 
+Enter the first number: 45
+Enter the second number: 78
+
+Output:
+The maximum between 45 and 78 is: 78
+
+Q2:------>=======================================================================================================================================================<------
+--------->=======================================================================================================================================================<------
+//Write a program to declare  a variable for integer number.
+
+//Assign a value to it and shift it to left and right using shift operators.
+
+//You can use shift by 1 place,  shift by 2 places.
+
+//Print output for both left & right shifts.
+package com.demo;
+public class ShiftOperators {
+    public static void main(String[] args) {
+        // Declare an integer variable and assign a value
+        int number = 10; // Binary representation: 1010
+
+        // Left shift by 1 place
+        int leftShift1 = number << 1; // Multiplies by 2^1
+        // Left shift by 2 places
+        int leftShift2 = number << 2; // Multiplies by 2^2
+
+        // Right shift by 1 place
+        int rightShift1 = number >> 1; // Divides by 2^1
+        // Right shift by 2 places
+        int rightShift2 = number >> 2; // Divides by 2^2
+
+        // Print the results
+        System.out.println("Original number: " + number);
+        System.out.println("Left shift by 1 place: " + leftShift1);
+        System.out.println("Left shift by 2 places: " + leftShift2);
+        System.out.println("Right shift by 1 place: " + rightShift1);
+        System.out.println("Right shift by 2 places: " + rightShift2);
+    }
+}
+
+Output:
+
+Original number: 10
+Left shift by 1 place: 20
+Left shift by 2 places: 40
+Right shift by 1 place: 5
+Right shift by 2 places: 2

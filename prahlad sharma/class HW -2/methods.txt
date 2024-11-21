@@ -1,0 +1,6 @@
+Methods in Throwable class (inherited by both Exception and RuntimeException)
+getMessage(): Returns the detail message of the exception.
+getStackTrace(): Returns an array of stack trace elements representing the execution flow at the time the exception was thrown.
+printStackTrace(): Prints the stack trace to the standard error stream.
+getCause(): Returns the cause of the exception, if any.
+toString(): Returns a string representation of the exception, including the class name and the detail message.

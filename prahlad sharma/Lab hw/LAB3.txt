@@ -1,0 +1,113 @@
+Q1.---->=============================================================================================================================================<-----------------
+------->=============================================================================================================================================<-----------------
+//Write a program to print whether entered year is leap or not.
+
+//check all possibilities of leap year using decision making statements .
+
+//Print result as leap year or not.
+package com.demo;
+import java.util.Scanner;
+
+public class LeapYearCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt user input
+        System.out.print("Enter a year: ");
+        int year = scanner.nextInt();
+
+        // Check all conditions for a leap year
+        if (year % 4 == 0) {
+            if (year % 100 == 0) {
+                if (year % 400 == 0) {
+                    System.out.println(year + " is a leap year.");
+                } else {
+                    System.out.println(year + " is not a leap year.");
+                }
+            } else {
+                System.out.println(year + " is a leap year.");
+            }
+        } else {
+            System.out.println(year + " is not a leap year.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+Input:
+Enter a year: 2000
+
+
+Output:
+2000 is a leap year.
+
+
+Q2.---->=============================================================================================================================================<-----------------
+------->=============================================================================================================================================<-----------------
+
+//Write a program to illustrate use of inheritance as parent child relationship.
+
+//Parent class :  User class with User details
+
+//Child class : child class of User having salary details of user.
+
+//Access parent class details using object of child class to print salary details of user.
+package com.demo;
+// Parent Class: User
+class User {
+    private String name;
+    private int age;
+
+    // Constructor to initialize user details
+    public User(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+}
+
+// Child Class: Employee
+class Employee extends User {
+    private double salary;
+
+    // Constructor to initialize user and salary details
+    public Employee(String name, int age, double salary) {
+        super(name, age); // Call to parent class constructor
+        this.salary = salary;
+    }
+
+    // Method to display salary details
+    public void displaySalaryDetails() {
+        // Access parent class details
+        System.out.println("Name: " + getName());
+        System.out.println("Age: " + getAge());
+        System.out.println("Salary: $" + salary);
+    }
+}
+
+// Main Class
+public class InheritanceDemo {
+    public static void main(String[] args) {
+        // Create an Employee object
+        Employee employee = new Employee("John Doe", 30, 75000);
+
+        // Access parent class details and display salary details
+        employee.displaySalaryDetails();
+    }
+}
+
+Output:
+Name: John Doe
+Age: 30
+Salary: $75000.0

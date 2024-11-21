@@ -1,0 +1,14 @@
+package com.demo;
+
+public class ThreeGreatest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int first=100;
+		int second=300;
+		int third=150;
+		int result=(first > second) ? (first > third ? first : third) : (second > third ? second : third);
+		System.out.println("greatest"+result);
+	}
+
+}

@@ -1,0 +1,21 @@
+package ifDemo;
+
+public class IfDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double first=50.30; //initialized statement
+		double second=50.5; 
+		double max;
+		if(first>second) 
+		{ 
+			max=first;
+		}
+		else 
+		{
+			max=second;
+		}
+		System.out.println("max is: "+max);
+	}
+
+}
